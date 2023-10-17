@@ -50,20 +50,17 @@ class CreateAdminUserSeeder extends Seeder
             'Email' => 'permission@gmail.com',
             'SuperAdmin' => '1',
             'password' => Hash::make('123456789'),
-            // 'AnnexeID'=>'1',
             'EntrepriseId' => '1',
-            //    'DateCreation'=>Carbon::now(),
-            // 'SaveNumber'=>'1',
             'ImageUser' => '',
         ]);
 
-        $role = Role::create(['Nom' => 'Admin', 'EntrepriseId' => '1']);
+        // $role = Role::create(['Nom' => 'Admin', 'EntrepriseId' => '1']);
 
-        $permissions = Permission::pluck('id', 'id')->all();
+        // $permissions = Permission::pluck('id', 'id')->all();
 
-        $role->syncPermissions($permissions);
+        // $role->syncPermissions($permissions);
 
-        $user->assignRole([$role->id]);
+        // $user->assignRole([$role->id]);
         Schema::enableForeignKeyConstraints();
     }
 }

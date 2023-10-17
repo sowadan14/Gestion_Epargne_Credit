@@ -19,13 +19,7 @@ class CreateAdminUserSeeder extends Seeder
     public function run(): void
     {
         Schema::disableForeignKeyConstraints();
-        //Admin Seeder
-        // $user = User::create([
-        //     'name' => 'LaravelTuts', 
-        //     'email' => 'admin@laraveltuts.com',
-        //     'password' => bcrypt('password')
-        // ]);
-
+      
         $user = User::create([
            'EmployeId'=>'1',
            'Email'=>'permission@gmail.com',
